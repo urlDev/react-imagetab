@@ -10,8 +10,8 @@ class Bottom extends Component {
         {value => {
           return (
             <div>
-              <a href={value.html} className="btn-primary" target="_blank">
-                <img src={require("../../logo.png")} alt="" />
+              <a href={value.html} target="_blank" rel="noopener noreferrer">
+                <img src={require("../../logo_transparent.png")} alt="" />
               </a>
             </div>
           );
