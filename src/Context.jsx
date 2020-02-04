@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import axios from "axios";
 import Unsplash, { toJson } from "unsplash-js";
-import { UNSPLASH_KEY, API_KEY } from "./config.js";
+import { UNSPLASH_KEY } from "./config.js";
 
 const ImageContext = React.createContext();
+
 
 //unsplash api
 const unsplash = new Unsplash({
@@ -15,15 +15,20 @@ class ImageProvider extends Component {
     super(props);
     this.state = {
       background: "",
-      loading: true,
-      html: ""
+      // loading: true,
+      html: "",
+      user: "",
+      download: ""
     };
   }
 
   componentDidMount() {
     // this.getWeather();
+    
     this.getPicture();
   }
+
+  
 //feature, outdoor, beautiful, like, life
   getPicture = () => {
     const page = Math.floor(Math.random() * 10);
@@ -34,12 +39,15 @@ class ImageProvider extends Component {
     let result = json.results[Math.floor(Math.random()*json.results.length)];
     this.setState({
       background: result.urls.regular,
-      loading: false,
-      html: result.links.html
+      // loading: false,
+      html: result.links.html,
+      user: result.user,
+      download: result.links.download_location
     })
-    console.log(json.results, page, this.state.html)
+    console.log(result, page, this.state.html)
   });
   };
+
 
   render() {
     return (

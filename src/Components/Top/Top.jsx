@@ -11,9 +11,7 @@ class Top extends Component {
           return (
             <div className="Top">
               {value.loading ? (
-                <div className="spinner-grow" role="status">
-                  <span className="sr-only">Loading...</span>
-                </div>
+                <h1 class="loading">loading</h1>
               ) : (
                 <img src={value.background} alt="" />
               )}

@@ -1,0 +1,20 @@
+.User {
+    position: absolute;
+    top: 94%;
+    left: 2%;
+    a {
+        img {
+            // display: inline-block;
+            border-radius: 50%;
+            width: 2em;
+            // margin-right: 1em;
+        }
+    }
+    h6 {
+        color: whitesmoke;
+        margin-left: 2.5em;
+        margin-top: 0.5em;
+        // display: inline-block;
+        text-shadow: 1px 1px #40356F;
+    }
+}
