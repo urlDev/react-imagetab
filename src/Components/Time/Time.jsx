@@ -23,11 +23,11 @@ class Time extends Component {
   }
 
   showMessage = () => {
-    if (this.state.time.slice(10, -6) >= 12 && this.state.time.slice(10, -6) < 20 ) {
+    if (this.state.time.slice(10, -6) >= 12 && this.state.time.slice(10, -6) < 18 ) {
       this.setState({
         message: "Good afternoon!"
       }) 
-    } else if (this.state.time.slice(10, -6) >= 20 ) {
+    } else if (this.state.time.slice(10, -6) >= 18 ) {
       this.setState({
         message: "Good evening!"
       })

@@ -23,7 +23,7 @@ class User extends Component {
                   >
                     <img src={value.user.profile_image.small} alt="" />
                   </a>
-                  <h6>{value.user.name}</h6>
+                  <h6>{value.user.name} on Unsplash</h6>
                 </div>
               ) : (
                 <div className="spinner-grow loading" role="status">

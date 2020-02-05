@@ -4,7 +4,6 @@ import { UNSPLASH_KEY } from "./config.js";
 
 const ImageContext = React.createContext();
 
-
 //unsplash api
 const unsplash = new Unsplash({
   accessKey: UNSPLASH_KEY
@@ -18,34 +17,33 @@ class ImageProvider extends Component {
       loading: true,
       html: "",
       user: "",
-      download: ""
+      download: "",
+      searchQuery: "nature"
     };
   }
 
   componentDidMount() {
-    // this.getWeather();
-    
     this.getPicture();
   }
 
-  
-//feature, outdoor, beautiful, like, life
+  //feature, outdoor, beautiful, like, life
   getPicture = () => {
     const page = Math.floor(Math.random() * 10);
-    unsplash.search.photos("life", page, 29, { orientation: "landscape" })
-  .then(toJson)
-  .then(json => {
-    // Your code
-    let result = json.results[Math.floor(Math.random()*json.results.length)];
-    this.setState({
-      background: result.urls.regular,
-      loading:false,
-      html: result.links.html,
-      user: result.user,
-      download: result.links.download_location
-    })
-    console.log(result, page, this.state.html)
-  });
+    unsplash.collections
+      .getCollectionPhotos(228275, page, 30, "popular")
+      .then(toJson)
+      .then(json => {
+        // Your code
+        let result =
+          json[Math.floor(Math.random() * json.length)];
+        this.setState({
+          background: result.urls.regular,
+          loading: false,
+          html: result.links.html,
+          user: result.user,
+          download: result.links.download_location
+        });
+      });
   };
 
 
