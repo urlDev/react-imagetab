@@ -18,3 +18,11 @@
         text-shadow: 1px 1px #40356F;
     }
 }
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #40356F;
+}

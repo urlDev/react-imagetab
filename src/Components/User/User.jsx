@@ -16,12 +16,19 @@ class User extends Component {
             <div>
               {value.user ? (
                 <div className="User">
-                <a href={value.user.links.html} target="_blank" rel="noopener noreferrer" ><img src={value.user.profile_image.small} alt="" /></a>
-                 <h6>{value.user.name}</h6>
-                  
+                  <a
+                    href={value.user.links.html}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={value.user.profile_image.small} alt="" />
+                  </a>
+                  <h6>{value.user.name}</h6>
                 </div>
               ) : (
-                "loading"
+                <div className="spinner-grow loading" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
               )}
             </div>
           );

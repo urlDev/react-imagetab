@@ -44,7 +44,6 @@ class Time extends Component {
   }
 
   render() {
-    // const n = d.toLocaleTimeString();
     return (
       <div>
         <h1 className="message">{this.state.message}</h1>

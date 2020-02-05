@@ -15,7 +15,7 @@ class ImageProvider extends Component {
     super(props);
     this.state = {
       background: "",
-      // loading: true,
+      loading: true,
       html: "",
       user: "",
       download: ""
@@ -39,7 +39,7 @@ class ImageProvider extends Component {
     let result = json.results[Math.floor(Math.random()*json.results.length)];
     this.setState({
       background: result.urls.regular,
-      // loading: false,
+      loading:false,
       html: result.links.html,
       user: result.user,
       download: result.links.download_location

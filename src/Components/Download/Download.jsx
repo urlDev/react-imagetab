@@ -13,7 +13,7 @@ class Download extends Component {
             <ImageConsumer>
             {value => {
                 return (
-                    <a href={`${value.background}=unsplash-${value.user.name}.jpg`}  className="downloadButton" download><i className="fas fa-file-download"></i></a>
+                    <a href={`${value.background}=unsplash-${value.user.name}.jpg`} target="_blank" rel="noopener noreferrer" className="downloadButton" download><i className="fas fa-file-download"></i></a>
                 )
             }}
             </ImageConsumer>
