@@ -3,10 +3,10 @@
     color: whitesmoke;
     position: absolute;
     top: 2%;
-    left: calc(100% - 3em - 2%);
+    left: calc(100% - 2em - 2%);
     display: inline-block;
     .fa-file-download {
-        font-size: 3em;
+        font-size: 2em;
         transition: all 0.5s ease-in-out;
         &:hover {
             color: #40356F;

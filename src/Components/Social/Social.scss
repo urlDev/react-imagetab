@@ -1,0 +1,13 @@
+.social {
+    position: absolute;
+    top: calc(100% - 2em - 2%);
+    left: calc(100% - 2em - 2%);
+    i {
+        color: #40356F;
+        font-size: 2em;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            color: whitesmoke;
+        }
+    }
+}

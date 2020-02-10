@@ -9,7 +9,7 @@ import Bottom from "./Components/Bottom/Bottom.jsx";
 import Time from "./Components/Time/Time.jsx";
 import User from "./Components/User/User.jsx";
 import Download from "./Components/Download/Download.jsx";
-import DefaultButton from "./Components/DefaultButton/DefaultButton.jsx";
+import Social from "./Components/Social/Social.jsx"
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Time />
       <User />
       <Download />
-      {/* <DefaultButton /> */}
+      <Social/>
     </div>
   );
 }
