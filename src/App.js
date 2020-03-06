@@ -8,7 +8,6 @@ import Top from "./Components/Top/Top.jsx";
 import Bottom from "./Components/Bottom/Bottom.jsx";
 import Time from "./Components/Time/Time.jsx";
 import User from "./Components/User/User.jsx";
-import Download from "./Components/Download/Download.jsx";
 import Social from "./Components/Social/Social.jsx"
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
       <Bottom />
       <Time />
       <User />
-      <Download />
+      {/* <Download /> */}
       <Social/>
     </div>
   );

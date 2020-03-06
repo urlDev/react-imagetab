@@ -29,12 +29,12 @@ class ImageProvider extends Component {
   //feature, outdoor, beautiful, like, life
   getPicture = () => {
     const page = Math.floor(Math.random() * 10);
-    unsplash.collections
-      .getCollectionPhotos(228275, page, 30, "popular")
+    unsplash.search
+      .photos("hd", page, 30, { orientation: "landscape" })
       .then(toJson)
       .then(json => {
-        // Your code
-        let result = json[Math.floor(Math.random() * json.length)];
+        let result =
+          json.results[Math.floor(Math.random() * json.results.length)];
         this.setState({
           background: result.urls.regular,
           loading: false,
